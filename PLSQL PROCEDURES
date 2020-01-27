@@ -83,3 +83,75 @@ after completing your work commit it ,commit means to store DataBase Objects per
 SQL> commit;
 
 Commit complete.
+
+SQL> desc user_source;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(30)
+ TYPE                                               VARCHAR2(12)
+ LINE                                               NUMBER
+ TEXT                                               VARCHAR2(4000)
+
+SQL> select distinct name ,text from user_source;
+
+NAME
+------------------------------
+TEXT
+--------------------------------------------------------------------------------
+FIND1_PASS_FAIL
+if(m1<35 or m2<35 or m3<35)then
+
+FIND1_PASS_FAIL
+res:='fail';
+
+FIND_PASS_FAIL
+procedure find_pass_fail(m1 in number,m2 in number,res out varchar)
+
+
+NAME
+------------------------------
+TEXT
+--------------------------------------------------------------------------------
+FIND_PASS_FAIL
+as
+
+FIND_PASS_FAIL
+res:='pass';
+
+FIRST_P1
+y:=x*x;
+
+SQL> select text from user_source where name='S1510';
+
+TEXT
+--------------------------------------------------------------------------------
+procedure s1510
+is
+begin
+dbms_output.put_line('welcome');
+end;
+
+NOTE::here S1510 name all characters are capital 
+
+below Statements for finding all Procedures...
+SQL> desc user_source;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(30)
+ TYPE                                               VARCHAR2(12)
+ LINE                                               NUMBER
+ TEXT                                               VARCHAR2(4000)
+
+SQL> select distinct name ,text from user_source;
+
+note1::below Statement for finding procedure source code...
+
+SQL> select text from user_source where name='S1510';
+
+TEXT
+--------------------------------------------------------------------------------
+procedure s1510
+is
+begin
+dbms_output.put_line('welcome');
+end;
