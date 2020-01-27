@@ -155,3 +155,10 @@ is
 begin
 dbms_output.put_line('welcome');
 end;
+
+here show error is used to find out the errors.....
+
+SQL> show error;
+No errors.
+SQL> show err;
+No errors.
