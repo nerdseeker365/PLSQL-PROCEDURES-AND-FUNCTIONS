@@ -1,0 +1,85 @@
+->A sub program is a named block of code.
+::::::::::::::::::::::::::::::::::TYPES OF SUB PROGRAMS::::::::::::::::::::::::::::::::::::
+1.Stored Procedures.
+2.Stored Functions.
+3.DataBase Triggers.
+4.Packages.
+note::
+->Stored Procedures are Pre-Compiled Queries.
+->Whenever Procedures are called increase the performance of the application.
+SYNTAX TO CREATE A STORED PROCEDURE:
+create [or replace] procedure <pname>(<parameter name1>[mode type] <datatype>
+is/as
+<declare variables>;
+<declare cursors>;
+begin
+<procedure body/statements>;
+end;
+/
+MODE TYPES::
+1.in mode
+2.out mode
+3.inout mode
+
+SYTAX TO CALL A STORED PROCEDURE::
+1.execute <pname>(values/(s));
+2.exe <pname>(values/(s));
+2.begin 
+<pname>(values/(s));
+end;
+/
+
+note::
+here PLSQL programming must and should on server output
+sql>set serveroutput on;
+
+SQL> set serveroutput on
+SQL> create or replace procedure p3131
+  2  is
+  3  begin
+  4  dbms_output.put_line('hello');
+  5  end;
+  6  /
+
+Procedure created.
+
+SQL> exec p3131
+hello
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> execute p3131
+hello
+
+PL/SQL procedure successfully completed.
+
+SQL> begin
+  2  p3131;
+  3  end;
+  4  /
+hello
+
+PL/SQL procedure successfully completed.
+SQL> create procedure p3132
+  2  as
+  3  begin
+  4  dbms_output.put_line('queen');
+  5  end;
+  6  /
+
+Procedure created.
+
+SQL> exe p3132
+queen
+
+PL/SQL procedure successfully completed.
+
+note::
+after completing your work commit it ,commit means to store DataBase Objects perminantely.
+SQL> commit;
+
+Commit complete.
