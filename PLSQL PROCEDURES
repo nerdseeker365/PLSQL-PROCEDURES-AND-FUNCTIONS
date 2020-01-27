@@ -162,3 +162,18 @@ SQL> show error;
 No errors.
 SQL> show err;
 No errors.
+SQL> create or replace procedure p3133(pempno number)
+  2  as
+  3  vename varchar2(20);
+  4  vsal number(10);
+  5  begin
+  6  select ename,sal into vename,vsal from emp where empno=pempno;
+  7  dbms_output.put_line(vename||','||vsal);
+  8  end;
+  9  /
+  
+  SQL> set serveroutput on;
+SQL> exec p3133(7788);
+SCOTT,3000
+
+PL/SQL procedure successfully completed.
